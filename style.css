@@ -1,0 +1,65 @@
+*{
+    margin: 20px;
+}#contenedor-principal{
+    background-color: rgb(40, 49, 49);
+    width: 28%;
+    height: 750px;
+    margin: 50px;
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+#encabezado{
+    background-color: rgb(144, 120, 69);
+    color: black;
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+    border-radius: 10px;
+    border: 3px solid black
+}
+h1{
+    margin: 15px;
+    padding: 15px;
+}
+
+input{
+    margin: 8px;
+    padding: 5px;
+    border-radius: 3px;
+    border: 2px solid black;
+}
+#operaciones{
+    text-align: center;
+    margin: 2%;
+}
+button{
+    margin: 12px;
+    padding: 10px;
+    justify-content: space-between;
+    width: 50px;
+    border-color: black;
+    border-radius: 5px;
+    color: black;
+    background-color: rgb(223, 151, 8);
+    border-radius: 4px;
+    border: 2px solid black;
+}
+#otras-operaciones{
+    justify-content: space-between;
+    width: 130px;
+
+}
+#mostrar-resultado{
+    background-color: rgb(144, 120, 69);
+    color: black;
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+    border-radius: 10px;
+    border: 3px solid black
+}
+
+
+

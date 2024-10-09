@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/JavaScript_Juanda/Calculadora/style.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    <div id="contenedor-principal">
+
+        <div id="encabezado">
+            <h1 id="tittle">Calculadora</h1>
+            <input type="number" id="primer-numero">
+            <input type="number" id="segundo-numero">
+        </div>
+        <div id="operaciones">
+            <button onclick="mostrarResultado()">+</button>
+            <button onclick="mostrarResta()">-</button>
+            <button onclick="mostrarMulti()">X</button>
+            <button onclick="mostrarDivision()">/</button>
+            </br>
+            <button onclick="mostrarRaiz()" id="otras-operaciones">Raiz</button>
+            <button onclick="mostrarPotencia()" id="otras-operaciones">Potencia</button>
+            </br>
+            <button onclick="mostrarAbsoluto()" id="otras-operaciones">Absoluto</button>
+            <button onclick="crearRandom()" id="otras-operaciones">Random</button>
+        </div>
+        <div id="mostrar-resultado">
+            <h1 id="tittle">Resultado</h1>
+            <input type="text" id="resultado">
+            </br>
+            <button onclick="mostrarRound()" id="otras-operaciones">Round</button>
+            <button onclick="mostrarFloor()" id="otras-operaciones">Floor</button>
+            <button onclick="mostrarCeil()" id="otras-operaciones">Cell</button>
+        </div>
+    </div>
+    <script>
+        function suma(num1, num2){
+            return num1 + num2;
+        }
+
+        function mostrarResultado(){
+            let num1 = parseFloat(document.getElementById("primer-numero").value);
+            let num2 = parseFloat(document.getElementById("segundo-numero").value);
+            let result = document.getElementById("resultado");
+
+            // Llama a la función suma y muestra el resultado
+            result.value = suma (num1, num2);
+        }
+
+        function resta(numero1, numero2){
+            return numero1 - numero2;
+        }
+        function mostrarResta(){
+            let numero1 = parseFloat(document.getElementById("primer-numero").value);
+            let numero2 = parseFloat(document.getElementById("segundo-numero").value);
+            let resulta = document.getElementById("resultado");
+
+            //llama a la funcion resta y muestra el resultado
+            resulta.value = resta (numero1, numero2);
+        }
+
+        function multiplicacion(nume1, nume2){
+            return nume1 * nume2;
+        }
+        function mostrarMulti(){
+            let nume1 = parseFloat(document.getElementById("primer-numero").value);
+            let nume2 = parseFloat(document.getElementById("segundo-numero").value);
+            let resul = document.getElementById("resultado");
+
+            //este llama a la funcion multiplicacion y muestra el resultado 
+            resul.value = multiplicacion (nume1, nume2);
+        }
+
+        function division(numero1, numero2){
+            return numero1 / numero2;
+        }
+        function mostrarDivision(){
+            let numero1 = parseFloat(document.getElementById("primer-numero").value);
+            let numero2 = parseFloat(document.getElementById("segundo-numero").value);
+            let res = document.getElementById("resultado");
+
+            //este llama a la funcion multiplicacion y muestra el resultado 
+            res.value = division (numero1, numero2);
+        }
+
+        function raiz(numero1){
+            return Math.sqrt(numero1);
+        }
+
+        function mostrarRaiz(){
+            let numero1 = parseFloat(document.getElementById("primer-numero").value);
+            let num2 = parseFloat(document.getElementById("segundo-numero").value);
+            let resul = document.getElementById("resultado");
+
+            //llamamos a la funcion raiz y muestra el resultado
+            resul.value = raiz (numero1);
+        }
+
+        function potenciar(num1, num2){
+            return Math.pow(num1, num2);  //math pow es la formula para la potencia de un numero 
+        }
+
+        function mostrarPotencia(){
+            let num1 = parseFloat(document.getElementById("primer-numero").value);
+            let num2 = parseFloat(document.getElementById("segundo-numero").value);
+            let result = document.getElementById("resultado");
+
+            //se llama a la funcion potencia y se muestra el resultado
+            result.value = potenciar (num1, num2);
+        }
+
+        function absoluto(num1){
+            return Math.abs(num1); //math abs es la formula para el numero absoluto de un numero 
+        }
+
+        function mostrarAbsoluto(){
+            let num1 = parseFloat(document.getElementById("primer-numero").value);
+            let num2 = parseFloat(document.getElementById("segundo-numero").value);
+            let resul = document.getElementById("resultado");
+
+            //llamamos a la funcion portenciar y se muestra el resultado 
+            resul.value = absoluto (num1);
+        }
+
+        function crearRandom(min, max){
+            return Math.flor(Math.random() * (max - min)) +min;
+        }
+
+        function mostrarRandom(){
+            let num1 = parseFloat(document.getElementById("primer-numero").value);
+            let num2 = parseFloat(document.getElementById("segundo-numero").value);
+            let resultado = document.getElementById("resultado");
+
+            //llamamos a la funcion crearRandom y se muestra el resultado
+            resultado.value = crearRandom (num1, num2);
+        }
+
+        function redondearCercano(num1){
+            return Math.round(num1);
+        }
+
+        function mostrarRound(){
+            let num1 = parseFloat(document.getElementById("primer-numero").value);
+            let num2 = parseFloat(document.getElementById("segundo-numero").value);
+            let resul = document.getElementById("resultado");
+
+            //llamamos a la funcion redondearnumero y se muestra el reultado
+
+            resul.value = redondearCercano (num1);
+        }
+
+        function redondearAbajo(num1){
+            return Math.floor(num1);
+        }
+
+        function mostrarFloor(){
+            let num1 = parseFloat(document.getElementById("primer-numero").value);
+            let num2 = parseFloat(document.getElementById("segundo-numero").value);
+            let resul = document.getElementById("resultado");
+
+            //llamamos a la funcion redondearnumero y se muestra el reultado
+
+            resul.value = redondearAbajo (num1);
+        }
+
+        function redondearArriba(num1){
+            return Math.ceil(num1);
+        }
+
+        function mostrarCeil(){
+            let num1 = parseFloat(document.getElementById("primer-numero").value);
+            let num2 = parseFloat(document.getElementById("segundo-numero").value);
+            let resul = document.getElementById("resultado");
+
+            //llamamos a la funcion redondearnumero y se muestra el reultado
+
+            resul.value = redondearArriba (num1);
+        }
+    </script>
+    </body>
+</html>
